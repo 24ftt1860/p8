@@ -4,12 +4,12 @@ import java.util.List;
 
 public class AssigningGrades {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
         System.out.println("Enter the number of students:");
         int n;
         try {
-            n = Integer.parseInt(sc.nextLine().trim());
+            n = Integer.parseInt(input.nextLine().trim());
             if (n <= 0) { System.out.println("Number of students must be positive."); return; }
         } catch (Exception e) {
             System.out.println("Invalid number."); return;
@@ -21,7 +21,7 @@ public class AssigningGrades {
         
         int idx = 0;
         while (idx < n) {
-            String line = sc.nextLine();
+            String line = input.nextLine();
             if (line == null || line.trim().isEmpty()) continue;
             String[] parts = line.trim().split("\\s+");
             for (String p : parts) {
