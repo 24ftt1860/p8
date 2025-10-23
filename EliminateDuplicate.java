@@ -22,8 +22,7 @@ public class EliminateDuplicate {
                 } catch (NumberFormatException ignored) { }
             }
         }
-
-        // eliminate duplicates: when duplicate found set later occurrence to 0
+        
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == 0) continue;
             for (int j = i + 1; j < nums.length; j++) {
